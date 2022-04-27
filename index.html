@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Checkbox</title>
+</head>
+<body>
+
+    
+
+    <label for="cars">Selecione su Jugada:</label>
+
+    <select name="jugar" id="jugar">
+        <option value="piedra">Piedra</option>
+        <option value="papel">Papel</option>
+        <option value="tijera">Tijera</option>
+    </select>
+   
+    <button  onclick="juagar()">Juagar</button>
+
+
+    <script>        
+
+        function juagar() {
+            // let a = "piedra";
+            // let b = "papel";
+            // let c = "tijera";
+
+            var myArray = ['piedra', 'papel', 'tijera','piedra', 'papel', 'tijera'];
+            var rand = Math.floor(Math.random()*myArray.length);
+
+            let humano = document.getElementById("jugar").value;
+            let maquina = myArray[rand];
+            console.log("humano",humano);     
+            console.log("maquina",maquina); 
+            
+            if(humano === maquina ){
+                console.log("Empate");
+            }else if(humano === "piedra" && maquina === "papel"){
+                console.log("Gana la maquina");
+            }else if(humano === "papel" && maquina === "piedra"){
+                console.log("Gana humano");
+            }else if(humano === "tijeras" && maquina === "papel"){
+                console.log("Gana humano");
+            }else if(humano === "piedra" && maquina === "tijera"){
+                console.log("Gana humano");
+            }else if(humano === "papel" && maquina === "tijera"){
+                console.log("Gana la maquina");
+            }else if(humano === "tijeras" && maquina === "piedra"){
+                console.log("Gana la maquina");
+            }else if (humano === "tijeras" && maquina === "piedra"){
+                
+            }
+
+
+
+
+            
+
+            
+            
+        }
+
+
+    </script>
+
+</body>
+
+</html>
